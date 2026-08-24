@@ -1,16 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo+Narrow:ital,wght@0,500;0,600;0,700;1,500;1,800&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/inter";
+
+body {
+  margin: 0;
+  background-color: black;
+}
+
+/* Background Wrapper Pinning */
+.pixel-background {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
 
 .portfolio {
-  --bg: #0d0d0d;
+  --bg: transparent; /* Makes background canvas visible */
   --accent: #8ACE00;
   --white: #f2f2f2;
   --muted: #7a7a7a;
+  
   background: var(--bg);
   color: var(--white);
   font-family: 'Archivo Narrow', sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  
+  /* Layering & Event Pass-Through */
+  position: relative;
+  z-index: 1;
+  pointer-events: none; /* Let clicks/hovers hit the PixelBlast canvas */
+}
+
+/* Restore interaction for navbar links, buttons, and inputs */
+.portfolio a,
+.portfolio button,
+.portfolio input,
+.portfolio textarea {
+  pointer-events: auto;
 }
 
 .portfolio *,
@@ -18,9 +51,11 @@
 .portfolio *::after {
   box-sizing: border-box;
 }
+
 .header {
   border-bottom: 3px solid var(--accent);
 }
+
 .nav {
   display: flex;
   flex-wrap: wrap;
@@ -30,6 +65,7 @@
   margin: 0;
   justify-content: center;
 }
+
 .nav a {
   color: var(--white);
   text-decoration: none;
@@ -39,21 +75,25 @@
   letter-spacing: 2px;
   transition: color 0.2s ease;
 }
+
 .nav a:hover,
 .nav a:focus-visible {
   color: var(--accent);
   outline: none;
 }
+
 .nav a.active {
   color: var(--accent);
   font-weight: 700;
 }
+
 .main {
   flex: 1;
   display: flex;
   align-items: center;
   padding: 40px clamp(20px, 6vw, 60px);
 }
+
 .hero h1 {
   margin: 0;
   font-size: clamp(40px, 7vw, 68px);
@@ -61,11 +101,13 @@
   line-height: 1.05;
   letter-spacing: 0.5px;
 }
+
 .hero h1 em {
   color: var(--accent);
   font-style: italic;
   font-weight: 800;
 }
+
 .hero p {
   margin: 14px 0 0;
   font-style: italic;
@@ -74,8 +116,3 @@
   letter-spacing: 1px;
   color: var(--white);
 }
-@media (max-width: 480px) {
-  .nav { gap: 14px; padding: 18px 20px; }
-  .nav a { font-size: 13px; }
-}
-      
