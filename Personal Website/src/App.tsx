@@ -35,10 +35,25 @@ export default function YuanPortfolioHome() {
 
         <main className="main">
           <div className="hero">
-            <h1>
-              HI, I AM <em>YUAN!</em>
-            </h1>
-            <p>STUDENT, DEVELOPER, CUTIEPIE</p>
+            <div className="hero-content">
+              <div className="hero-text">
+                <h1>
+                  HI, I AM <em>YUAN!</em>
+                </h1>
+                <p>STUDENT, DEVELOPER, CUTIEPIE</p>
+              </div>
+
+              {/* Glowing Green Hexagon */}
+              <div className="hexagon-wrapper">
+                <svg
+                  viewBox="0 0 100 115"
+                  className="hexagon-svg"
+                  aria-hidden="true"
+                >
+                  <polygon points="50,5 95,30 95,85 50,110 5,85 5,30" />
+                </svg>
+              </div>
+            </div>
           </div>
         </main>
       </div>

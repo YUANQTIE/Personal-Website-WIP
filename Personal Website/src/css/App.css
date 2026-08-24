@@ -91,6 +91,7 @@ body {
   flex: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 40px clamp(20px, 6vw, 60px);
 }
 
@@ -115,4 +116,55 @@ body {
   font-size: clamp(16px, 2.4vw, 22px);
   letter-spacing: 1px;
   color: var(--white);
+}
+
+/* Hero Flex Layout */
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(24px, 50vw, 400px);
+  width: 100%;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+/* Hexagon Container & Styling */
+.hexagon-wrapper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hexagon-svg {
+  width: clamp(120px, 15vw, 220px);
+  height: auto;
+  fill: none;
+  stroke: var(--accent); /* Matches #8ACE00 */
+  stroke-width: 8;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 16px rgba(138, 206, 0, 0.6));
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* Subtle Hover Effect */
+.hexagon-wrapper:hover .hexagon-svg {
+  filter: drop-shadow(0 0 24px rgba(138, 206, 0, 0.9));
+  transform: scale(1.03);
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 640px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hexagon-svg {
+    width: 100px;
+    margin-top: 16px;
+  }
 }
