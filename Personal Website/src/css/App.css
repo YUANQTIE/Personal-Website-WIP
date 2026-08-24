@@ -52,9 +52,9 @@ body {
   box-sizing: border-box;
 }
 
-.header {
+/*.header {
   border-bottom: 3px solid var(--accent);
-}
+}*/
 
 .nav {
   display: flex;
