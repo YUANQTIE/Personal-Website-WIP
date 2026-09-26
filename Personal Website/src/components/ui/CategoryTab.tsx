@@ -1,23 +1,20 @@
 import type { ReactNode } from 'react';
-import {Smiley, Book} from '@/components/ui/Icons';
-
+import {Smiley, Book, Envelope, Briefcase} from '@/components/ui/Icons';
 
 type CategoryTabProps = {
     title?: 'About Me' | 'Education' | 'Contact Me' | 'Experience';
-    icon?: 'Smiley' | 'Book' 
-    
+    icon?: 'Smiley' | 'Book' | 'Envelope' | 'Briefcase';
 }
 
 export default function CategoryTab({
   title = 'About Me',
   icon = 'Smiley',
 }: CategoryTabProps) {
-  const variantIcons: Record<
-    NonNullable<CategoryTabProps['icon']>,
-    ReactNode
-  > = {
+  const variantIcons: Record<NonNullable<CategoryTabProps['icon']>, ReactNode> = { 
     Smiley: <Smiley/>,
-    Book: <Book/>
+    Book: <Book/>,
+    Envelope: <Envelope/>,
+    Briefcase: <Briefcase/>
   };
 
   return (
