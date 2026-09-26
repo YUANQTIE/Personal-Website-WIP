@@ -24,12 +24,12 @@ export default function YuanPortfolioHome() {
       <div className="portfolio">
         <header className="header">
           <nav className="nav" aria-label="Primary">
-            <a href="#home" className="active">HOME</a>
-            <a href="#about">ABOUT</a>
-            <a href="#education">EDUCATION</a>
-            <a href="#experience">EXPERIENCE</a>
-            <a href="#projects">PROJECTS</a>
-            <a href="#contact">CONTACT ME</a>
+            <a href="">HOME</a>
+            <a href="">ABOUT ME</a>
+            <a href="">EDUCATION</a>
+            <a href="">EXPERIENCE</a>
+            <a href="">PROJECTS</a>
+            <a href="">CONTACT ME</a>
           </nav>
         </header>
 
@@ -42,6 +42,7 @@ export default function YuanPortfolioHome() {
                 </h1>
                 <p>STUDENT, DEVELOPER, CUTIEPIE</p>
               </div>
+              
 
               {/* Glowing Green Hexagon */}
               <div className="hexagon-wrapper">
