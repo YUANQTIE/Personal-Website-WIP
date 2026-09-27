@@ -1,5 +1,7 @@
 import "./css/App.css";
 import PixelBlast from "@/components/PixelBlast.jsx";
+import AboutMeSection from "./components/ui/AboutMe/AboutMeSection";
+import HeroSection from "./components/ui/Hero/HeroSection";
 
 export default function YuanPortfolioHome() {
   return (
@@ -8,7 +10,7 @@ export default function YuanPortfolioHome() {
         <PixelBlast
           variant="square"
           pixelSize={3}
-          color="#8ACE00"
+          color="#334d00"
           patternScale={2}
           patternDensity={1}
           enableRipples
@@ -36,24 +38,7 @@ export default function YuanPortfolioHome() {
         <main className="main">
           <div className="hero">
             <div className="hero-content">
-              <div className="hero-text">
-                <h1>
-                  HI, I AM <em>YUAN!</em>
-                </h1>
-                <p>STUDENT, DEVELOPER, CUTIEPIE</p>
-              </div>
-              
-
-              {/* Glowing Green Hexagon */}
-              <div className="hexagon-wrapper">
-                <svg
-                  viewBox="0 0 100 115"
-                  className="hexagon-svg"
-                  aria-hidden="true"
-                >
-                  <polygon points="50,5 95,30 95,85 50,110 5,85 5,30" />
-                </svg>
-              </div>
+                <HeroSection/>
             </div>
           </div>
         </main>

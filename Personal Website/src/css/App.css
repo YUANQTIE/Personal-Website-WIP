@@ -94,27 +94,6 @@ body {
   padding: 40px clamp(20px, 6vw, 60px);
 }
 
-.hero h1 {
-  margin: 0;
-  font-size: clamp(40px, 7vw, 68px);
-  font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: 0.5px;
-}
-
-.hero h1 em {
-  font-style: italic;
-  font-weight: 800;
-}
-
-.hero p {
-  margin: 14px 0 0;
-  font-weight: 500;
-  font-size: clamp(16px, 2.4vw, 22px);
-  letter-spacing: 1px;
-  color: var(--white);
-}
-
 /* Hero Flex Layout */
 .hero-content {
   display: flex;

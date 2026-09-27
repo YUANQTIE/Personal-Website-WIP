@@ -2,16 +2,16 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import type { ComponentProps } from 'react';
 
-import CategoryTab from '@/components/ui/CategoryTab';
+import IconBox from '@/components/ui/AboutMe/IconBox';
 
-type StoryProps = ComponentProps<typeof CategoryTab>
+type StoryProps = ComponentProps<typeof IconBox>
 
 const meta: Meta<StoryProps> = {
-    component: CategoryTab,
+    component: IconBox,
 }
 
 export default meta;
 
 type Story = StoryObj<StoryProps>;
 
-export const CatTab: Story = {};
+export const IBox: Story = {};
