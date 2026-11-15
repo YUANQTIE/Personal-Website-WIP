@@ -19,9 +19,13 @@ export default function AboutMeSection() {
             </div>
 
             {/* FRAME 13 / ICON CONTAINER */}
-            <div className="w-full px-4 md:px-0">
-              <IconBox />
+            {/* FRAME 13 / ICON CONTAINER */}
+            <div className="flex w-full flex-row items-center justify-center px-4 md:px-0">
+              <div className="flex justify-center">
+                <IconBox />
+              </div>
             </div>
+            
         </section>
     );
 }

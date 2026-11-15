@@ -2,11 +2,14 @@ import HexagonFrame from "./HexagonFrame";
 import TextType from '../ReactBits/TextType';
 
 
+const heroButton =
+    "bg-[#8ace00] px-5 py-3 font-pixel text-[13px] uppercase text-black shadow-[3px_3px_0px_#1A1A1A] transition-all duration-100 hover:-translate-y-[2px] hover:bg-[#a6f500] hover:shadow-[5px_5px_0px_#1A1A1A] motion-reduce:hover:translate-y-0 md:px-7 md:text-[17px]";
+
 export default function HeroSection() {
     const words = [
-        "A SOFTWARE DEVELOPER",
         "A CS STUDENT AT DLSU",
         "INTO DATA & AI",
+        "SQL CERTIFIED",
         "OPEN TO OPPORTUNITIES"
     ];
     return (
@@ -43,16 +46,15 @@ export default function HeroSection() {
                         </span>
                     </h2> {/* I am A */}
 
-                    <p className="m-0 mt-2 max-w-[560px] text-center font-body text-[14px] leading-[1.6] text-white/75 md:text-[18px]">
-                        Computer Science student at De La Salle University building web apps and exploring data for research and conservation.
-                    </p>
-
                     <div className="mt-5 flex flex-wrap justify-center gap-3 md:mt-8 md:gap-5">
-                        <a href="#projects" className="bg-[#8ace00] px-5 py-3 font-pixel text-[13px] uppercase text-black shadow-[3px_3px_0px_#1A1A1A] transition-all duration-100 hover:-translate-y-[2px] hover:bg-[#a6f500] hover:shadow-[5px_5px_0px_#1A1A1A] motion-reduce:hover:translate-y-0 md:px-7 md:text-[17px]">
+                        <a href="#projects" className={heroButton}>
                             View Projects
                         </a>
-                        <a href="#contact" className="border-2 border-[#8ace00] bg-black/40 px-5 py-3 font-pixel text-[13px] uppercase text-[#8ace00] transition-all duration-100 hover:-translate-y-[2px] hover:bg-[#8ace00] hover:text-black motion-reduce:hover:translate-y-0 md:px-7 md:text-[17px]">
+                        <a href="#contact" className={heroButton}>
                             Contact Me
+                        </a>
+                        <a href="/Panlilio_CV.pdf" target="_blank" rel="noopener noreferrer" className={heroButton}>
+                            View CV
                         </a>
                     </div>
 

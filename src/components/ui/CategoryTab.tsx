@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import {Smiley, Book, Envelope, Briefcase, Chat} from '@/components/ui/Icons';
 
 type CategoryTabProps = {
-    title?: 'About Me' | 'Education' | 'Contact Me' | 'Experience' | 'Projects' | 'Blog';
+    title?: 'About Me' | 'Education' | 'Contact Me' | 'Experience' | 'Projects' | 'Say Hi!';
     icon?: 'Smiley' | 'Book' | 'Envelope' | 'Briefcase' | 'Chat';
 }
 

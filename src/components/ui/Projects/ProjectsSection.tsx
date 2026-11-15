@@ -7,11 +7,28 @@ type Project = {
   link?: string;
 };
 
-// TODO: replace with your real projects (3 slots).
 const projects: Project[] = [
-  { name: 'Project One', description: 'A brief description of what this project does and what you built it with.' },
-  { name: 'Project Two', description: 'A brief description of what this project does and what you built it with.' },
-  { name: 'Project Three', description: 'A brief description of what this project does and what you built it with.' },
+  {
+    name: 'Save-My-Lab',
+    description:
+      'A laboratory seat reservation system that streamlines lab bookings and admin work. I built the entire backend with Express.js and MongoDB, plus responsive Handlebars frontends wired up with the Fetch API.',
+    image: '/savemylab.png',
+    link: 'https://save-my-lab-nrqz.onrender.com/',
+  },
+  {
+    name: 'DSS Dashboard',
+    description:
+      "An interactive dashboard of key insights and performance metrics for the DLSU Data Science Society. I cleaned and preprocessed the data in Python and Jupyter, then built the visualizations in Streamlit.",
+    image: '/dss-dashboard.png',
+    link: 'https://github.com/DLSU-Data-Science-Society-Open-Git-Hub/DLSU-Data-Science-Society-Dashboard',
+  },
+  {
+    name: 'The Quiver',
+    description:
+      'A one-stop marketplace for Lasallian student organizations to sell merch. Built with Next.js and Supabase, with Google login, org storefronts, a cart, and checkout.',
+    image: '/quiver.jpg',
+    link: 'https://the-quiver-six.vercel.app/',
+  },
 ];
 
 function ProjectCard({ name, description, image, link }: Project) {

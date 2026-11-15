@@ -1,4 +1,4 @@
-import { useEffect, useState, type CSSProperties, type FormEvent } from 'react';
+import { useEffect, useState, /*type CSSProperties, */ type FormEvent } from 'react';
 import CategoryTab from '../CategoryTab';
 
 type Note = {
@@ -92,7 +92,7 @@ export default function BlogSection() {
   return (
     <section className="flex w-full flex-col items-center gap-6 p-0 md:gap-[42px]">
       <div className="flex w-full flex-row items-start px-4 md:px-0">
-        <CategoryTab title="Blog" icon="Chat" />
+        <CategoryTab title="Say Hi!" icon="Chat" />
       </div>
 
       <div className="flex w-full flex-col gap-8 px-4 font-pixel lg:px-[37px]">
@@ -128,13 +128,13 @@ export default function BlogSection() {
           </button>
         </form>
         {status === 'sent' && (
-          <p className="m-0 -mt-4 font-body text-[13px] text-[#8ace00] md:text-[15px]">Thanks! Your message was sent.</p>
+          <p className="m-0 -mt-4 font-body text-[13px] text-[#8ace00] md:text-[15px]">I got your message!</p>
         )}
         {status === 'error' && (
           <p className="m-0 -mt-4 font-body text-[13px] text-red-400 md:text-[15px]">Couldn't send that. Please try again in a bit.</p>
         )}
 
-        {/* Notes wall */}
+        {/* Notes wall 
         <ul className="m-0 flex list-none flex-wrap justify-center gap-5 p-0 md:gap-8">
           {notes.map((n) => (
             <li
@@ -146,7 +146,7 @@ export default function BlogSection() {
               <p className="m-0 mt-2 text-[11px] uppercase text-[#8ace00] md:text-[12px]">- {n.name}</p>
             </li>
           ))}
-        </ul>
+        </ul>*/}
       </div>
     </section>
   );

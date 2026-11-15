@@ -7,17 +7,18 @@ type EducationEntry = {
   points: string[];
 };
 
-// TODO: double-check these against your real records — transcribed from the mockup.
+// College entry matches the CV; high school entries were transcribed from the mockup.
 const education: EducationEntry[] = [
   {
     school: 'De La Salle University',
     level: 'College',
-    dates: 'September 2024 - September 2028',
+    dates: 'September 2024 - Present',
     points: [
-      'Currently studying BS Computer Science - Software Technology.',
-      'Participates in organizational experiences for Data Science Society (DSS), The Society of Proactive Role Models Inspiring Total Development (SPARKT), CATCHERS, and Computer Studies Government (CSG).',
-      'My relevant coursework includes Programming Fundamentals, database systems, data structures and algorithms, software project management, web development, and machine learning.',
-      "A DOST-SEI Merit scholar and currently a consistent dean's lister with a CGPA of above 3.5.",
+      'BS Computer Science major in Software Technology, with a cumulative GWA of 3.576 / 4.',
+      "Consistent Dean's Lister and DOST-SEI Merit Scholar.",
+      'Certified SQL Associate (DataCamp, September 2026).',
+      'Research and Academics Executive at the Data Science Society, Socio-Civic Assistant Vice President at SPRINT, and HR - Administrative Chairperson at CATCH2T28.',
+      'Relevant coursework includes programming fundamentals, database systems, data structures and algorithms, software project management, web development, and machine learning.',
     ],
   },
   {
@@ -28,16 +29,7 @@ const education: EducationEntry[] = [
       'Took the Science, Technology, Engineering, and Mathematics (STEM) Strand.',
       'Graduated with a Silver Medal.',
     ],
-  },
-  {
-    school: 'De La Salle Araneta University',
-    level: 'Junior High School',
-    dates: 'June 2018 - May 2022',
-    points: [
-      'Graduated with High Honors recognition.',
-      'Won Silver for Science Feature Writing during NAPSA 2020 and Bronze for Sports Feature Writing during NAPSA 2021.',
-    ],
-  },
+  }
 ];
 
 const shadow = 'shadow-[5px_5px_3px_#1A1A1A] md:shadow-[17px_17px_3px_#1A1A1A]';
