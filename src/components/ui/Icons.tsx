@@ -130,3 +130,12 @@ export function Discord(){
         </svg>
     )
 }
+
+export function Chat(){
+    return (
+        <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fillRule="evenodd" clipRule="evenodd" d="M14 10H76V14H80V60H76V64H40V68H36V72H32V76H28V64H14V60H10V14H14V10ZM18 18V56H32V64H36V60H40V56H72V18H18Z" fill="#8ACE00"/>
+            <path d="M28 34H34V40H28V34Z M42 34H48V40H42V34Z M56 34H62V40H56V34Z" fill="#8ACE00"/>
+        </svg>
+    )
+}

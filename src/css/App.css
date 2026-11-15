@@ -1,0 +1,73 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/inter";
+
+@font-face {
+  font-family: 'VCR OSD Mono';
+  src: url('../fonts/VCR_OSD_MONO.woff') format('woff');
+  font-display: swap;
+}
+
+@theme {
+  --font-pixel: 'VCR OSD Mono', ui-monospace, monospace;   /* headings, labels, nav */
+  --font-body: 'Inter Variable', system-ui, sans-serif;     /* paragraphs, long text */
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 87.5%; /* scales all rem-based spacing ~12% smaller */
+}
+
+html, body {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  font-family: 'VCR OSD Mono', ui-monospace, monospace;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Background Wrapper Pinning */
+.pixel-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+
+/* ---------- Hover interactions ---------- */
+/* Boxes: lift + bigger shadow + green ring; press down on click */
+.hover-pop {
+  transition: transform 120ms steps(3), box-shadow 120ms steps(3);
+}
+@media (hover: hover) {
+  .hover-pop:hover {
+    box-shadow: 0 0 0 1px #8ace00, 7px 7px 3px #1A1A1A;
+  }
+}
+@media (hover: hover) and (min-width: 768px) {
+  .hover-pop:hover {
+    box-shadow: 0 0 0 1px #8ace00, 20px 20px 3px #1A1A1A;
+  }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .hover-pop:hover { transform: translate(-2px, -2px); }
+}
+
+/* Social icons: hop up and turn green */
+.icon-hop {
+  display: inline-block;
+  transition: transform 120ms steps(3);
+}
+.icon-hop path { transition: fill 120ms; }
+@media (hover: hover) {
+  .icon-hop:hover path { fill: #8ace00; }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .icon-hop:hover { transform: translateY(-3px); }
+}
